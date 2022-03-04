@@ -27,16 +27,14 @@ class Pagination {
   includeTreeLeft() {
     if (this.value == 5) {
       this.value = [2].concat(this.value)
-      this.includeTreeLeft()
     }
     return this;
   }
   includeTreeRight() {
     if (this.current == this.total - 4) {
       this.value = this.value.concat([this.total - 1]);
-      this.includeTreeRight();
-   }
-   return this;
+    }
+    return this;
   }
   includeLeftDots() {
     if (this.current > 5) {
@@ -63,7 +61,7 @@ class Pagination {
 
 const main = () => {
   // Example
-  const pages = new Pagination({currentPage: 32, totalPages: 2323}).getPages();
+  const pages = new Pagination({currentPage: 6, totalPages: 10}).getPages();
 
   console.log(pages);
   // [
