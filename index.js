@@ -33,7 +33,7 @@ class Pagination {
   }
   includeTreeRight() {
     if (this.current == this.total - 4) {
-      this.handleIncludeTreeLeft(this.value.concat([this.total - 1]), this.current, this.total);
+      this.value = this.value.concat([this.total - 1]);
       this.includeTreeRight();
    }
    return this;
